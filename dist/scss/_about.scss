@@ -1,0 +1,49 @@
+.about {
+  background: url(../icons/Subtle-Prism.svg);
+  background-position: center;
+  background-size: cover;
+
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    text-align: center;
+    margin: 10px 0;
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: 5px 15px 25px #000000;
+    }
+    h3 {
+      margin-top: 15px;
+      font-family: sans-serif;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about .row {
+    flex-direction: row;
+  }
+  .about .row .col {
+    text-align: left;
+
+    h3 {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+
+  .about .row .col:nth-child(1) {
+    margin-left: 180px;
+  }
+
+  .about .row .col:nth-child(2) {
+    margin-left: 60px;
+
+    p {
+      width: 90%;
+    }
+  }
+}

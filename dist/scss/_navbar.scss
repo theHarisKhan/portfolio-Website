@@ -1,0 +1,129 @@
+.navbar {
+  background: $tufts-blue;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+
+    &_brand {
+      position: relative;
+      color: $oxford-blue;
+
+      p {
+        font-size: 2rem;
+        text-transform: lowercase;
+        font-family: cursive;
+      }
+    }
+
+    &_menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      text-align: center;
+      justify-content: end;
+
+      .navbar_item {
+        font-family: sans-serif;
+        padding: 0.5rem 1.5rem;
+        color: $oxford-blue;
+        @include transition-ease;
+
+        &:hover {
+          border-bottom: 2px solid $crimson;
+        }
+      }
+    }
+
+    &_toggle {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .navbar_container {
+    width: 100%;
+  }
+
+  .navbar_container_brand {
+    position: absolute;
+    left: 20px;
+    z-index: 1;
+  }
+
+  .navbar_container_toggle {
+    display: block;
+    position: absolute;
+    top: 0.9rem;
+    right: 10px;
+    width: 3rem;
+    height: 3px;
+    background-color: $oxford-blue;
+    z-index: 1;
+    cursor: pointer;
+    @include transition-ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      width: 2.4rem;
+      height: 3px;
+      background-color: $oxford-blue;
+      border-radius: 50px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      width: 2rem;
+      height: 3px;
+      background-color: $oxford-blue;
+      border-radius: 50px;
+    }
+  }
+
+  .navbar_container_toggle.active {
+    @include transition-ease;
+
+    &::before {
+      width: 2rem;
+    }
+    &::after {
+      width: 2.6rem;
+    }
+  }
+
+  .navbar_container_menu {
+    font-size: 1.3rem;
+    width: 100%;
+    height: 100vh;
+    padding-top: 8rem;
+    transform: translateY(-1500px);
+    background-color: $tufts-blue;
+    position: relative;
+    flex-direction: column;
+    @include transition-ease;
+  }
+
+  .navbar_container_menu.active {
+    transform: translateY(0);
+  }
+
+  .navbar_item {
+    margin: 1rem 0;
+
+    &:hover {
+      letter-spacing: 2px;
+    }
+  }
+}

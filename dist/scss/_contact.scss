@@ -1,0 +1,58 @@
+.contact {
+  text-align: center;
+
+  .row {
+    flex-direction: column;
+
+    .block-1 {
+      background: #ececec;
+      padding: 40px 15px;
+      margin: 20px 0;
+      box-shadow: -3px 5px 10px #5e5c5c;
+      img {
+        width: 80px;
+      }
+      h4 {
+        margin: 10px 0;
+      }
+      .ph-numb {
+        color: #0090d3;
+        font-size: 1.3rem;
+        font-weight: 900;
+        margin-top: 10px;
+      }
+      .btn {
+        background: $crimson;
+        color: white;
+        padding: 15px 26px;
+        font-size: 1.4rem;
+        font-family: sans-serif;
+        transition: background, box-shadow 350ms ease-in-out;
+
+        &:hover {
+          background: $oxford-blue;
+          box-shadow: 10px 10px 5px #000000a6;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 692px) {
+  .contact .row {
+    flex-direction: row;
+  }
+  .contact .row .block-1 {
+    padding: 30px 10px;
+    margin: 20px 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact .row .block-1 {
+    padding: 30px 6px;
+    margin: 20px 15px;
+    height: auto;
+    width: 400px;
+  }
+}

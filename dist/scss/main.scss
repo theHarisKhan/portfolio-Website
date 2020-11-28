@@ -1,0 +1,51 @@
+@import "config";
+@import "navbar";
+@import "about";
+@import "services";
+@import "contact";
+
+.header {
+  background: $gradient-bottom, url(../icons/glamorous.svg);
+  background-attachment: fixed;
+
+  &_banner {
+    text-align: center;
+    color: $crimson;
+
+    .banner_title {
+      font-style: oblique;
+      text-shadow: 3px 3px 5px $crimson;
+    }
+    .banner_headline {
+      margin: 10px 0;
+    }
+
+    .banner_btn {
+      background-color: $oxford-blue;
+      color: #ccc;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      box-shadow: 15px 15px 5px #000000a6;
+      transition: background-color ease-in-out 250ms;
+
+      &:hover {
+        background-color: #012b46;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 100vh;
+  }
+  .banner_para {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .header_banner .banner_btn {
+    font-size: 1.6rem;
+    padding: 20px 65px;
+  }
+}
