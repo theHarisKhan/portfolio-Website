@@ -1,0 +1,36 @@
+footer {
+  background: $crimson;
+  color: #fff;
+  padding: 30px 0;
+}
+.footer {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  &_headline {
+    font-family: Consolas;
+    font-style: oblique;
+  }
+  p {
+    margin: 5px 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  &_social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    .social-link {
+      margin: 0 10px;
+      img {
+        width: 40px;
+        filter: invert(1);
+        transition: filter 350ms ease-in-out;
+      }
+
+      &:hover img {
+        filter: invert(0);
+      }
+    }
+  }
+}

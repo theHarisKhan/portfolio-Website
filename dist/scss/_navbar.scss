@@ -13,13 +13,20 @@
     margin: 0 auto;
 
     &_brand {
+      top: 10px;
       position: relative;
-      color: $oxford-blue;
 
-      p {
+      a {
+        color: $oxford-blue;
         font-size: 2rem;
-        text-transform: lowercase;
-        font-family: cursive;
+        font-weight: 900;
+        font-family: Consolas;
+        font-style: oblique;
+        transition: color 350ms ease-in-out;
+
+        &:hover {
+          color: #524f4f;
+        }
       }
     }
 
@@ -32,10 +39,11 @@
       justify-content: end;
 
       .navbar_item {
+        font-size: 1.3rem;
         font-family: sans-serif;
         padding: 0.5rem 1.5rem;
         color: $oxford-blue;
-        @include transition-ease;
+        transition: border-bottom 160ms ease-in-out;
 
         &:hover {
           border-bottom: 2px solid $crimson;
@@ -70,7 +78,7 @@
     background-color: $oxford-blue;
     z-index: 1;
     cursor: pointer;
-    @include transition-ease;
+    transition: border-bottom 160ms ease-in-out;
 
     &::before {
       content: "";

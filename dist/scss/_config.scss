@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+// scroll behaviour and color
+*::-webkit-scrollbar {
+  width: 15px;
+}
+*::-webkit-scrollbar-track {
+  background-color: #011f31;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #0197f6ff;
+  border-radius: 20px;
+  border: 3px solid #011f31;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }

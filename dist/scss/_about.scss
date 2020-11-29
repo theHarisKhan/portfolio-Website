@@ -2,6 +2,7 @@
   background: url(../icons/Subtle-Prism.svg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 
   .row {
     flex-direction: column;
@@ -22,7 +23,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .about .row {
     flex-direction: row;
   }

@@ -1,17 +1,17 @@
 .services {
   background-color: $oxford-blue;
+  overflow: hidden;
 
-  .row {
-    position: relative;
-    flex-direction: column;
-    justify-content: space-between;
-
+  .grid {
+    display: grid;
+    grid-gap: 26px;
+    justify-content: center;
     .card {
       position: relative;
 
       &_face {
-        width: 300px;
-        height: 200px;
+        width: 280px;
+        height: 260px;
         transition: 0.5s;
         text-align: center;
       }
@@ -20,29 +20,26 @@
         position: relative;
         background: #333;
         text-align: center;
-        padding: 15px 0;
+        padding: 10px 0;
         z-index: 1;
-        transform: translateY(100px);
         transition: transform 350ms ease;
+
+        &:hover {
+          background: $tufts-blue;
+        }
 
         .content {
           opacity: 0.2;
           transition: opacity 350ms ease-in-out;
           img {
-            width: 250px;
+            width: 150px;
             filter: invert(0.9);
-            transition: max-width 350ms ease-in-out;
           }
           h3 {
             margin: 10px 0 0;
             padding: 0;
             color: #fff;
           }
-        }
-
-        &:hover {
-          background: $tufts-blue;
-          transform: translateY(0);
         }
       }
 
@@ -71,27 +68,47 @@
         }
       }
 
-      &:hover .card_face1.face .content {
+      &:hover .card_face1.card_face .content {
         opacity: 1;
-      }
-      &:hover .card_face1.face .content img {
-        max-width: 230px;
       }
     }
   }
 }
 
-@media screen and (min-width: 692px) {
-  .services .row {
-    flex-direction: row;
+@media screen and (min-width: 690px) {
+  .services .grid {
+    .card {
+      &_face {
+        width: 450px;
+        height: 260px;
+      }
+      &_face1 {
+        .content img {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .services .grid {
+    grid-template-columns: 1fr 1fr 1fr;
 
     .card {
-      margin: 0 5px;
-
+      &_face {
+        width: 350px;
+        height: 250px;
+      }
       &_face1 {
-        transform: translateY(160px);
-        .content img {
-          width: 110px;
+        padding: 20px 0;
+        .content {
+          h3 {
+            font-size: 2.3rem;
+          }
+          img {
+            width: 150px;
+          }
         }
       }
     }
