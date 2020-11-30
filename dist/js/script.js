@@ -5,3 +5,7 @@ ToggleBtn.addEventListener('click', ()=> {
     MenuBar.classList.toggle('active')
     ToggleBtn.classList.toggle('active')
 })
+
+window.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  }, false);

@@ -8,6 +8,17 @@
 .header {
   background: $gradient-bottom, url(../icons/glamorous.svg);
   background-attachment: fixed;
+  position: relative;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   width: 100%;
+  //   height: 100px;
+  //   z-index: 1000;
+  //   background: linear-gradient(transparent, #0197f6ff);
+  // }
 
   &_banner {
     text-align: center;

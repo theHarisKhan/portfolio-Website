@@ -97,6 +97,22 @@
 
     .card {
       &_face {
+        width: 305px;
+        height: 280px;
+
+        .content h3 {
+          font-size: 2.6rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1114px) {
+  .services .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .card {
+      &_face {
         width: 350px;
         height: 250px;
       }

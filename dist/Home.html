@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home</title>  
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -46,7 +47,7 @@
     </header>
 
     <section id="about" class="about">
-        <div class="container row">
+        <div class="container row" data-aos="fade-up">
             <div class="col">
                 <img src="img/adult-blur-brick-walls-846741.jpg" alt="person">
                 <h3>Jackson Evily</h3>
@@ -66,7 +67,7 @@
 
     <section class="services" id="services">
         <div class="container grid">
-            <div class="card">
+            <div class="card" data-aos="fade-right" data-aos-duration="1000">
                 <div class="card_face card_face1">
                     <div class="content">
                         <img src="icons/hosting.svg" alt="icon">
@@ -84,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-right" data-aos-duration="1300">
                 <div class="card_face card_face1">
                     <div class="content">
                         <img src="icons/learning.svg" alt="icon">
@@ -102,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-right" data-aos-duration="1500">
                 <div class="card_face card_face1">
                     <div class="content">
                         <img src="icons/web-programming.svg" alt="icon">
@@ -128,13 +129,13 @@
         <p>want to get in touch? We'd love to hear from you.</p>
 
         <div class="row">
-            <div class="block-1">
+            <div class="block-1" data-aos="zoom-in">
                 <img src="icons/phone-call.svg" alt="icon">
                 <h4>Call us</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, exercitationem.</p>
                 <p class="ph-numb">+1 22 11 223 22</p>
             </div>
-            <div class="block-1">
+            <div class="block-1" data-aos="zoom-in">
                 <img src="icons/help.svg" alt="icon">
                 <h4>Contact Customer Support</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, exercitationem.</p><br/><br/>
@@ -166,5 +167,10 @@
 
 
 <script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
