@@ -298,7 +298,7 @@ nav {
   line-height: 30px;
   color: #ffffff;
   font-weight: 700;
-  margin-top: 17px;
+  margin-top: 26px;
 }
 
 .about--skills {
@@ -436,6 +436,102 @@ nav {
 .box--info > .sec--head-para {
   font-size: 1.2rem;
   line-height: 1.4;
+}
+
+/*  */
+/* Testiomals Section */
+/*  */
+.Testiomals {
+  position: relative;
+  padding: 15rem 0;
+  background: #001149;
+  color: #fff;
+  overflow: hidden;
+}
+
+.Testiomals > .container {
+  width: 800px;
+  height: 340px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clients--box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide--row {
+  width: 3200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.slide-col {
+  background-color: #130d0d;
+  position: relative;
+  text-align: center;
+
+  width: 302px;
+  height: 340px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-col > img {
+  position: absolute;
+  top: -50px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 3px solid #8100a8;
+}
+
+.slide-col > .slide--info {
+  width: 90%;
+}
+
+.slide--info > p {
+  color: #e9e6e6;
+}
+
+.slide--info > h5 {
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.indicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20%;
+}
+
+.Btn {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 4px;
+  border-radius: 15px;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.Active {
+  width: 45px;
 }
 
 /*  */
@@ -615,6 +711,15 @@ footer > .container > p {
   .box--info {
     text-align: left;
     margin-top: 0px;
+  }
+
+  .Testiomals > .container {
+    height: 260px;
+  }
+
+  .slide-col {
+    width: 890px;
+    height: 260px;
   }
 }
 
